@@ -2,7 +2,7 @@
 /*using Class1.cs
 */
 using MyShapeLibrary;
-using Coordonee.cs;
+
 
 Coordonee Test1 = new Coordonee();
 Coordonee Test2 = new Coordonee();
