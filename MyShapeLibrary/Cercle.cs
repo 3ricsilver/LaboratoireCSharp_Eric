@@ -43,5 +43,14 @@ namespace MyShapeLibrary
         {
             return "Cercle: PointAccroche=" + PointAccroche + "," + "Rayon=" + _rayon + "Diametre="+ Diametre;
         }
+
+        //interface
+        public bool CoordonneeEstDans(Coordonee p)
+        {
+            // Cette fois le point d'accroche c'est le truc au centre
+            //la formule du cercle j'ai rien capté mais cimer au mec de stack overflow pour ces explicaitions
+            double distance = Math.Sqrt(Math.Pow(p.X - PointAccroche.X, 2) + Math.Pow(p.Y - PointAccroche.Y, 2));
+            return distance <= Rayon;
+        }
     }
 }

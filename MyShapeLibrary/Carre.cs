@@ -40,5 +40,19 @@ namespace MyShapeLibrary
         {
             return "PointAccroche=" + PointAccroche + "," + "Cote=" + _cote;
         }
+
+        //Interface
+        public bool CoordonneeEstDans(Coordonee p)
+        {
+            //En gros point d'accroche sera le coin gauche en haut
+
+            //En gros je determine les points du carré puis la condition va check si c'est dedans  //coucou mika si tu passes par la 
+            int xMin = PointAccroche.X;
+            int yMin = PointAccroche.Y;
+            int xMax = xMin + Cote;
+            int yMax = yMin + Cote;
+
+            return p.X >= xMin && p.X <= xMax && p.Y >= yMin && p.Y <= yMax;
+        }
     }
 }

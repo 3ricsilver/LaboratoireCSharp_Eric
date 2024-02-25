@@ -3,6 +3,9 @@
 */
 using MyShapeLibrary;
 
+
+/*TEST1*/
+
 //coordonnée
 /*Coordonee Test1 = new Coordonee();
 Coordonee Test2 = new Coordonee(2,4);
@@ -43,7 +46,7 @@ TestCercle2.Rayon = 10;
 Console.WriteLine("Test Cercle  2 après modification du rayon :");
 Console.WriteLine(TestCercle2);*/
 
-Rectangle TestRectangle1 = new Rectangle();
+/*Rectangle TestRectangle1 = new Rectangle();
 Console.WriteLine("Test Rectangle   1 (constructeur par défaut) :");
 Console.WriteLine(TestRectangle1);
 
@@ -55,4 +58,33 @@ Console.WriteLine(TestRectangle2);
 TestRectangle2.Longueur = 15;
 TestRectangle2.Largeur = 20;
 Console.WriteLine("Test Rectangle   2 après modification de la longueur et de la largeur :");
-Console.WriteLine(TestRectangle2);
+Console.WriteLine(TestRectangle2);*/
+
+/*TEST 2-3*/
+
+// truc pour test
+Carre TestCarre1 = new Carre();
+Carre TestCarre2 = new Carre(1, 2, 5);
+Cercle TestCercle1 = new Cercle();
+Cercle TestCercle2 = new Cercle(1, 2, 5);
+Rectangle TestRectangle1 = new Rectangle();
+Rectangle TestRectangle2 = new Rectangle(1, 2, 5, 10);
+
+// une liste qui peut contenir les truc pour test
+List<Forme> formeList = new List<Forme>
+{
+    TestCarre1,
+    TestCarre2,
+    TestCercle1,
+    TestCercle2,
+    TestRectangle1,
+    TestRectangle2
+};
+
+// la on check juste si ca affiche bien
+foreach (Forme forme in formeList)
+{
+    Console.WriteLine(forme);
+}
+
+

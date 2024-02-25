@@ -42,6 +42,19 @@ namespace MyShapeLibrary
         {
             return "Rectangle: PointAccroche=" + PointAccroche + "," + "Longueur=" + _longueur + "Largeur=" + _largeur;
         }
+
+        //interface
+        public bool CoordonneeEstDans(Coordonee p)
+        {
+            // en haut gauche 
+
+            int xMin = PointAccroche.X;
+            int yMin = PointAccroche.Y;
+            int xMax = xMin + Longueur;
+            int yMax = yMin + Largeur;
+
+            return p.X >= xMin && p.X <= xMax && p.Y >= yMin && p.Y <= yMax;
+        }
     }
 }
 
